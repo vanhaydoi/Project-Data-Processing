@@ -1,0 +1,38 @@
+# Tạo file .gitignore để loại bỏ file không cần thiết
+cat > .gitignore << 'EOF'
+# Logs và cache
+logs/
+*.log
+*.tmp
+__pycache__/
+.pytest_cache/
+
+# Environment files
+.env
+.venv/
+venv/
+
+# Data files
+*.parquet
+*.csv
+*.json
+
+# Docker volumes
+docker/*/data/
+docker/*/logs/
+
+# IDE files
+.vscode/
+.idea/
+.DS_Store
+
+# Python specific
+*.pyc
+*.pyo
+__pycache__/
+
+# Big data files
+*.jar
+*.zip
+*.tar.gz
+EOF
