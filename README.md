@@ -46,58 +46,54 @@ pip install de-streaming-ingestion-framework
 pip install de-batch-ingestion-framework  
 pip install de-hdfs-elt-framework
 # 📁 Cấu trúc dự án
-realtime-data-processing/
-├── 📦 de_streaming_ingestion_framework/    # Streaming framework
-│   ├── src/
-│   │   ├── streaming_ingestion.py
-│   │   └── __init__.py
-│   ├── setup.py
-│   ├── requirements.txt
-│   └── README.md
+realtime-data-processing/ \
+├── 📦 de_streaming_ingestion_framework/    # Streaming framework \
+│   ├── src/ \
+│   │   ├── streaming_ingestion.py \
+│   │   └── __init__.py \
+│   ├── setup.py \
+│   ├── requirements.txt \
+│   └── README.md \
+│ \
+├── 📦 de_batch_ingestion_framework/        # Batch processing framework  \
+│   ├── src/ \
+│   │   ├── json_processor.py \
+│   │   └── __init__.py \
+│   ├── setup.py \
+│   ├── requirements.txt \
+│   └── README.md \
+│ \
+├── 📦 de_hdfs_elt_framework/              # ETL framework \
+│   ├── src/ \
+│   │   ├── raw_to_staging.py \
+│   │   ├── staging_to_mart.py \
+│   │   └── __init__.py \
+│   ├── setup.py \
+│   ├── requirements.txt \
+│   └── README.md \
 │
-├── 📦 de_batch_ingestion_framework/        # Batch processing framework  
-│   ├── src/
-│   │   ├── json_processor.py
-│   │   └── __init__.py
-│   ├── setup.py
-│   ├── requirements.txt
-│   └── README.md
+├── 🎛️ de_dags/                           # Airflow orchestration \
+│   ├── dags/ \
+│   │   ├── main_pipeline.py \
+│   │   ├── streaming_dag.py \
+│   │   └── batch_dag.py \
+│   ├── plugins/ \
+│   ├── requirements.txt \
+│   └── README.md \
+│ \
+├── 🐳 docker/                            # Docker configurations \
+│   ├── airflow/ \
+│   ├── jenkin/ \
+│   ├── hadoop/ \
+│   └── kafka/ \
 │
-├── 📦 de_hdfs_elt_framework/              # ETL framework
-│   ├── src/
-│   │   ├── raw_to_staging.py
-│   │   ├── staging_to_mart.py
-│   │   └── __init__.py
-│   ├── setup.py
-│   ├── requirements.txt
-│   └── README.md
+├── 🧪 tests/                            # Test cases \
+│   ├── unit/ \
+│   ├── integration/ \
+│   └── fixtures/ \
 │
-├── 🎛️ de_dags/                           # Airflow orchestration
-│   ├── dags/
-│   │   ├── main_pipeline.py
-│   │   ├── streaming_dag.py
-│   │   └── batch_dag.py
-│   ├── config/
-│   │   ├── config.yml
-│   │   └── airflow.cfg
-│   ├── plugins/
-│   ├── requirements.txt
-│   └── README.md
-│
-├── 🐳 docker/                            # Docker configurations
-│   ├── airflow/
-│   ├── spark/
-│   ├── hadoop/
-│   └── kafka/
-│
-├── 🧪 tests/                            # Test cases
-│   ├── unit/
-│   ├── integration/
-│   └── fixtures/
-│
-│
-├── 📄 requirements.txt                  # Python dependencies
-└── 📖 README.md                        # Project documentation
-# 📞 Liên hệ
+├── 📄 requirements.txt                  # Python dependencies \
+└── 📖 README.md                        # Project documentation \
+# 📞 Liên hệ 
 - Maintainer: Vanhaydoi
 - Email: nguyenduyvanhaydoi1512@gmail.com
