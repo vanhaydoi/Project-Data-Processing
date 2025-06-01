@@ -1,36 +1,7 @@
 # Real-Time & Batch Data Ingestion Platform
 Nền tảng xử lý dữ liệu thời gian thực được thiết kế để thu thập, xử lý và phân tích dữ liệu từ nhiều nguồn khác nhau, bao gồm luồng streaming và batch processing. Framework này được phát triển dưới dạng các package riêng biệt và được publish lên PyPI để tái sử dụng dễ dàng.
-[Download CV](./Realtime Data Processing to Hadoop.pdf)
 # 🏗️ Kiến trúc hệ thống
-flowchart LR
-  %% Nhóm nguồn dữ liệu
-  subgraph DataSources["Data Sources"]
-    Kaf["Kafka Streaming\n18.211.252.152:9092\ntopic: de-capstone3"]
-    JSON["JSON Files\n(Batch Input)"]
-    Airflow["Apache Airflow\n(Orchestration)"]
-  end
-
-  %% Nhóm xử lý Spark
-  subgraph Spark["Apache Spark Processing"]
-    SS["Spark Streaming\n(Real-time)"]
-    PB["Python Batch Jobs\n(Scheduled Processing)"]
-  end
-
-  %% Nhóm lưu trữ HDFS
-  subgraph HDFS["Hadoop HDFS Data Lake"]
-    RAW["RAW\n(Raw Data)"] --> STG["STAGING\n(Cleaned)"] --> MART["MART\n(Analytics Ready)"]
-  end
-
-  %% Các kết nối chính
-  Kaf --> SS
-  JSON --> PB
-  Airflow --> PB
-
-  SS --> RAW
-  PB --> RAW
-
-  MART --> Hive["Apache Hive\n(Metadata & SQL Analytics)"] --> BI["Power BI\n(via ODBC Connection)"]
-
+![Kiến trúc hệ thống](./Data%20Processing.png)
 # ✨ Tính năng chính
 ## 🌊 Streaming Data Processing
 - Thu thập dữ liệu real-time từ Apache Kafka
