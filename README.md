@@ -44,7 +44,7 @@ Nền tảng xử lý dữ liệu thời gian thực được thiết kế để
 ## Cài đặt các framework từ PyPI
 pip install de-streaming-ingestion-framework \
 pip install de-batch-ingestion-framework  \
-pip install de-hdfs-elt-framework \
+pip install de-hdfs-elt-framework 
 # 📁 Cấu trúc dự án
 realtime-data-processing/ \
 ├── 📦 de_streaming_ingestion_framework/    # Streaming framework \
