@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.cfg
+src/vanhaydoi_batch_ingestion/__init__.py
+src/vanhaydoi_batch_ingestion/json_processor.py
+src/vanhaydoi_batch_ingestion/tempCodeRunnerFile.py
+src/vanhaydoi_batch_ingestion.egg-info/PKG-INFO
+src/vanhaydoi_batch_ingestion.egg-info/SOURCES.txt
+src/vanhaydoi_batch_ingestion.egg-info/dependency_links.txt
+src/vanhaydoi_batch_ingestion.egg-info/requires.txt
+src/vanhaydoi_batch_ingestion.egg-info/top_level.txt
