@@ -49,8 +49,7 @@ pip install de-hdfs-elt-framework
 realtime-data-processing/
 ├── 📦 de_streaming_ingestion_framework/    # Streaming framework
 │   ├── src/
-│   │   ├── kafka_consumer.py
-│   │   ├── spark_streaming.py
+│   │   ├── streaming_ingestion.py
 │   │   └── __init__.py
 │   ├── setup.py
 │   ├── requirements.txt
@@ -58,8 +57,7 @@ realtime-data-processing/
 │
 ├── 📦 de_batch_ingestion_framework/        # Batch processing framework  
 │   ├── src/
-│   │   ├── file_processor.py
-│   │   ├── batch_job.py
+│   │   ├── json_processor.py
 │   │   └── __init__.py
 │   ├── setup.py
 │   ├── requirements.txt
@@ -67,9 +65,8 @@ realtime-data-processing/
 │
 ├── 📦 de_hdfs_elt_framework/              # ETL framework
 │   ├── src/
-│   │   ├── etl_jobs.py
-│   │   ├── data_quality.py
-│   │   ├── transformations.py
+│   │   ├── raw_to_staging.py
+│   │   ├── staging_to_mart.py
 │   │   └── __init__.py
 │   ├── setup.py
 │   ├── requirements.txt
@@ -93,25 +90,13 @@ realtime-data-processing/
 │   ├── hadoop/
 │   └── kafka/
 │
-├── 📊 monitoring/                        # Monitoring và logging
-│   ├── prometheus/
-│   ├── grafana/
-│   └── logs/
-│
 ├── 🧪 tests/                            # Test cases
 │   ├── unit/
 │   ├── integration/
 │   └── fixtures/
 │
-├── 📋 docs/                             # Documentation
-│   ├── architecture.md
-│   ├── deployment.md
-│   └── troubleshooting.md
 │
-├── 🐳 docker-compose.yml                # Docker services
 ├── 📄 requirements.txt                  # Python dependencies
-├── 🔧 Makefile                         # Build automation
-├── 🔑 .env.example                     # Environment variables template
 └── 📖 README.md                        # Project documentation
 # 📞 Liên hệ
 - Maintainer: Vanhaydoi
